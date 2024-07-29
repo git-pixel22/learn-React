@@ -14,17 +14,16 @@ import {
 } from "@material-tailwind/react";
 
 function WorkspaceLayout() {
-    const navigate = useNavigate();
-    
-    const handleItemClick = (title) => {
-        
-          navigate('/invite');
-      };
+  const navigate = useNavigate();
+  const [searchQuery, setSearchQuery] = React.useState('');
 
+  const handleItemClick = () => {
+    navigate('/invite');
+  };
 
   return (
     <div className="bg-purple-600 min-h-screen p-4">
-      <Typography variant="h5" color="white" className="mb-4" onClick={()=>navigate("/")}>
+      <Typography variant="h5" color="white" className="mb-4" onClick={() => navigate("/")}>
         <span className="cursor-pointer">← Back to workspace</span>
       </Typography>
       
@@ -45,7 +44,13 @@ function WorkspaceLayout() {
           
           <div className="flex justify-between items-center mt-4 mb-2">
             <Typography variant="h6">All members (1)</Typography>
-            <div className="flex gap-2">
+            <div className="flex gap-2 items-center">
+              <Input
+                size="lg"
+                placeholder="Search members"
+                value={searchQuery}
+                className="w-1/3"
+              />
               <Button color="teal" onClick={handleItemClick}>Invite new members</Button>
             </div>
           </div>
