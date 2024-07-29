@@ -33,7 +33,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { Button } from "@material-tailwind/react";
 
-export function SidebarWithCta() {
+export function SidebarWithCta({onTemplateClick, onTrashClick, onRecentClick, onDashBoardClick}) {
   const [open, setOpen] = React.useState(0);
   const [openAlert, setOpenAlert] = React.useState(true);
 
@@ -48,7 +48,7 @@ export function SidebarWithCta() {
       </div>
       <List>
 
-        <ListItem>
+        <ListItem onClick={onRecentClick}>
           <ListItemPrefix>
             <ClockIcon className="h-5 w-5" />
           </ListItemPrefix>
@@ -144,7 +144,7 @@ export function SidebarWithCta() {
           </ListItem>
           <AccordionBody className="py-1">
             <List className="p-0">
-              <ListItem>
+              <ListItem onClick={onDashBoardClick}>
                 <ListItemPrefix>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -206,14 +206,14 @@ export function SidebarWithCta() {
         </div>
       </Alert>
 
-      <ListItem>
+      <ListItem onClick={onTemplateClick}>
           <ListItemPrefix>
             <SquaresPlusIcon className="h-5 w-5" />
           </ListItemPrefix>
           Templates And Themes
         </ListItem>
 
-        <ListItem>
+        <ListItem onClick={onTrashClick}>
           <ListItemPrefix>
             <TrashIcon className="h-5 w-5" />
           </ListItemPrefix>

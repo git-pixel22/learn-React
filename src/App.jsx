@@ -5,17 +5,6 @@ import Invite from './pages/Invite.jsx'
 import InviteSent from './pages/InviteSent.jsx';
 import ManagePage from './pages/ManagePage.jsx'
 
-// const App = () => {
-//   return (
-//     <div className="App">
-//       {/* <Workspace /> */}
-//       {/* <Invite /> */}
-//       {/* <InviteSent /> */}
-//       <ManagePage />
-
-//     </div>
-//   );
-// };
 
 function App() {
   return (

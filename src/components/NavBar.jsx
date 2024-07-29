@@ -122,7 +122,7 @@ function NavList() {
   );
 }
 
-export function ComplexNavbar() {
+export function ComplexNavbar({navTitle}) {
   const [isNavOpen, setIsNavOpen] = React.useState(false);
 
   const toggleIsNavOpen = () => setIsNavOpen((cur) => !cur);
@@ -144,7 +144,7 @@ export function ComplexNavbar() {
           onClick={toggleIsNavOpen}
         >
           <ClockIcon className="h-5 w-5" />
-          Recent
+          {navTitle}
         </Button>
 
         <div className="flex items-center gap-2">
