@@ -24,7 +24,7 @@ function WorkspaceLayout() {
 
   return (
     <div className="bg-purple-600 min-h-screen p-4">
-      <Typography variant="h5" color="white" className="mb-4">
+      <Typography variant="h5" color="white" className="mb-4" onClick={()=>navigate("/")}>
         <span className="cursor-pointer">← Back to workspace</span>
       </Typography>
       
