@@ -46,7 +46,6 @@ function WorkspaceLayout() {
           <div className="flex justify-between items-center mt-4 mb-2">
             <Typography variant="h6">All members (1)</Typography>
             <div className="flex gap-2">
-              <Input type="text" placeholder="Search members" className="w-64" />
               <Button color="teal" onClick={handleItemClick}>Invite new members</Button>
             </div>
           </div>
